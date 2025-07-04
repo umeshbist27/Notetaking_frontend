@@ -1,0 +1,15 @@
+
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+     "types": ["jest", "node", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "**/*.ts", "**/*.tsx", "**/*.test.ts", "**/*.test.tsx"],
+}

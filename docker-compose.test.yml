@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  frontend-test:
+    build:
+      context: .
+      target: builder
+    command: [ "npm", "test" , "--", "--watchAll=false"]
+    env_file:
+      - ./.env
