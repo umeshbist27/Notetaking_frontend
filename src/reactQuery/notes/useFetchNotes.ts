@@ -10,7 +10,7 @@ export const useFetchNotes=()=>{
         queryKey:['notes'] as const,
         retry:false,
         queryFn:async ()=>{
-            const {data}=await API.get<INote[]>('/note');
+            const {data}=await API.get<INote[]>('api/notes/note');
             return data;
         }
     })

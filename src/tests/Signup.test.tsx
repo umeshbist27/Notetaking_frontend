@@ -16,7 +16,7 @@ jest.mock("react-router-dom", () => {
   };
 });
 jest.mock('../config', () => ({
-  VITE_API: 'http://mock-api:3000/api/auth/notes',
+  VITE_API: 'http://mock-api:3000/',
 }));
 jest.mock("axios");
 jest.mock("react-toastify", () => ({
@@ -86,7 +86,7 @@ describe("Signup Component", () => {
     });
 
     expect(mockedAxios.get).toHaveBeenCalledWith(
-      "http://mock-api:3000/api/auth/notes/check-email",
+      "http://mock-api:3000/api/auth/check-email",
       { params: { email: "umesh@example.com" } }
     );
 
@@ -116,7 +116,7 @@ describe("Signup Component", () => {
     });
 
     expect(mockedAxios.post).toHaveBeenCalledWith(
-      "http://mock-api:3000/api/auth/notes/signup",
+      "http://mock-api:3000/api/auth/signup",
       {
         name: "Umesh",
         email: "umesh@example.com",

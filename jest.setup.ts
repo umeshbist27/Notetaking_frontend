@@ -10,5 +10,5 @@ if (typeof TextDecoder === "undefined") {
 }
 
 jest.mock('./src/config', () => ({
-  VITE_API: 'http://mock-api:3000/api/auth/notes',
+  VITE_API: 'http://mock-api:3000/',
 }));

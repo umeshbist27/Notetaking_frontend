@@ -7,7 +7,7 @@ export const useEditNote = () => {
 
   return useMutation<INote, unknown, { id: string; note: Partial<INote> }>({
     mutationFn: ({ id, note }) =>
-      API.put(`/edit/${id}`, note).then((res) => res.data),
+      API.put(`api/notes/edit/${id}`, note).then((res) => res.data),
     onSuccess: () => {
       queryClient.invalidateQueries(["notes"] as any);
     },

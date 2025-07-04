@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async (values:formValue, { resetForm, setSubmitting }: any) => {
     try {
       const res = await axios.post(
-        `${VITE_API}/login`,
+        `${VITE_API}api/auth/login`,
         values
       );
       localStorage.setItem("token", res.data.token);

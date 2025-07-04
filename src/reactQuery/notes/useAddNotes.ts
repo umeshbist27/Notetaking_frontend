@@ -7,7 +7,7 @@ export const useAddNotes = () => {
 
   return useMutation<INote, unknown, Partial<INote>>({
     mutationFn: (noteData) =>
-      API.post("/create", noteData).then((res) => res.data),
+      API.post("api/notes/create", noteData).then((res) => res.data),
     onSuccess: () => {
       queryClient.invalidateQueries(["notes"] as any);
     },

@@ -64,7 +64,7 @@ describe("React query Note custom useHooks", () => {
       expect(result.current.isSuccess).toBe(true);
     });
 
-    expect(mockedAPI.post).toHaveBeenCalledWith("/create", newNote);
+    expect(mockedAPI.post).toHaveBeenCalledWith("api/notes/create", newNote);
   });
 
 
@@ -82,7 +82,7 @@ describe("React query Note custom useHooks", () => {
       expect(result.current.isSuccess).toBe(true);
     });
 
-    expect(mockedAPI.delete).toHaveBeenCalledWith("/1");
+    expect(mockedAPI.delete).toHaveBeenCalledWith("api/notes/1");
   });
 
   it("edits a note by ID", async () => {
@@ -104,6 +104,6 @@ describe("React query Note custom useHooks", () => {
       expect(result.current.isSuccess).toBe(true);
     });
 
-    expect(mockedAPI.put).toHaveBeenCalledWith("/edit/1", update);
+    expect(mockedAPI.put).toHaveBeenCalledWith("api/notes/edit/1", update);
   });
 });

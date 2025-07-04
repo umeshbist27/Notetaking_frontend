@@ -15,7 +15,7 @@ jest.mock("react-toastify", () => ({
 }));
 
 jest.mock('../config', () => ({
-  VITE_API: 'http://mock-api:3000/api/auth/notes',
+  VITE_API: 'http://mock-api:3000/',
 }));
 
 const mockedNavigate = jest.fn();
@@ -87,7 +87,7 @@ it("navigates to signup page when clicking 'Sign up'", () => {
 
     await waitFor(() => {
       expect(mockedAxios.post).toHaveBeenCalledWith(
-        "http://mock-api:3000/api/auth/notes/login",
+        "http://mock-api:3000/api/auth/login",
         {
           email: "test@example.com",
           password: "password123",

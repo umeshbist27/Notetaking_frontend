@@ -21,7 +21,7 @@ const Signup = () => {
   const handleSubmit = async (values:FormValues, { setSubmitting, resetForm }:{setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }) => {
     try {
       const checkEmail = await axios.get(
-        `${VITE_API}/check-email`,
+        `${VITE_API}api/auth/check-email`,
         {
           params: { email: values.email },
         }
@@ -32,7 +32,7 @@ const Signup = () => {
         return;
       }
 
-      await axios.post(`${VITE_API}/signup`, values);
+      await axios.post(`${VITE_API}api/auth/signup`, values);
       resetForm();
       toast.success("signup successfully");
       navigate("/login");
