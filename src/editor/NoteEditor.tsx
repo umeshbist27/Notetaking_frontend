@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 
 import { initUndoRedo, pushSnapshot } from "../common/customUndoRedo";
 
+
 interface NoteEditorProps {
   note: INote | NewNote;
   onSave: (note: INote | NewNote) => void;
